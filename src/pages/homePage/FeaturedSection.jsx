@@ -101,7 +101,7 @@ const FeaturedSection = () => {
                             </div>
                         ))}
                     </div>
-                    <div className='flex items-center gap-x-3'>
+                    <div className='flex items-center gap-x-3 cursor-pointer'>
                         <span className='font-roboto text-[#020101] text-[15px]'>Explore Our services </span>
                         <ArrowRight className='w-5 h-5' />
                     </div>

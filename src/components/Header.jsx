@@ -30,7 +30,7 @@ const Header = () => {
   ]
   return (
     <div className='w-full absolute z-30'>
-      <Container className="flex justify-between items-center py-4">
+      <Container className="flex justify-between items-center py-4 text-white">
         <Image src={logo} alt='logo' className='max-w-[183px] filter invert-100 brightness-0 ' />
         <p>Make a call: (727) 497 7285</p>
         <ul className='flex gap-5'>
@@ -44,7 +44,7 @@ const Header = () => {
       <Container className='flex justify-between items-center py-6'>
         <div>
           <nav>
-            <ul className='flex gap-x-5'>
+            <ul className='flex gap-x-5 text-white'>
               {navItems.map((navItem, index) =>(
 
                 <li key={index}><Link href={navItem.href}>{navItem.name}</Link></li>
@@ -52,7 +52,7 @@ const Header = () => {
             </ul>
           </nav>
         </div>
-        <Link href='#' className='border border-white px-10 py-4 bg-transparent font-semibold hover:bg-white hover:text-black transition-colors duration-300 ease-in-out font-roboto'>
+        <Link href='#' className='border border-white px-10 py-4 text-white bg-transparent font-semibold hover:bg-white hover:text-black transition-colors duration-300 ease-in-out font-roboto'>
           Request A Quote
         </Link>
       </Container>

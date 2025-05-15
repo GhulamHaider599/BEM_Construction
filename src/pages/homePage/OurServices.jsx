@@ -93,10 +93,10 @@ const OurServices = () => {
                     </div>
                     <div>
                         <button className='cursor-pointer' onClick={() => swiperRef.current?.slidePrev()}>
-                            <ChevronLeft className='w-20 h-20 hover:text-[#54595F] transition-colors duration-300 ease-in-out'  />
+                            <ChevronLeft className='w-20 h-20 hover:text-[#54595F] text-white transition-colors duration-300 ease-in-out'  />
                         </button>
                         <button className='cursor-pointer' onClick={() => swiperRef.current?.slideNext()}>
-                            <ChevronRight className='w-20 h-20 hover:text-[#54595F] transition-colors duration-300 ease-in-out'/>
+                            <ChevronRight className='w-20 h-20 hover:text-[#54595F] text-white transition-colors duration-300 ease-in-out'/>
                         </button>
                     </div>
                 </div>
