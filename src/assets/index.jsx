@@ -23,6 +23,25 @@ import workVisionImg from '@/assets/images/vision.png';
 import workMissionImg from '@/assets/images/mission.png';
 import buildingImg1 from '@/assets/images/buildingImg.jpg';
 import buildingImg2 from '@/assets/images/buildingImg2.jpg';
+import bannerImg from '@/assets/images/banner.jpg';
+import projectImg1 from '@/assets/images/img1-min.jpg';
+import projectImg2 from '@/assets/images/img2-min.jpg';
+import projectImg3 from '@/assets/images/img3-min.jpg';
+import projectImg4 from '@/assets/images/img4-min.jpg';
+import projectImg5 from '@/assets/images/img-5.jpg';
+import projectImg6 from '@/assets/images/img-6.jpg';
+import projectImg7 from '@/assets/images/img-7.jpg';
+import projectImg8 from '@/assets/images/img-8.jpg';
+import clientImg1 from '@/assets/images/client1-1.png';
+import clientImg2 from '@/assets/images/client2-1.jpg';
+import clientImg3 from '@/assets/images/client3-1.png';
+import clientImg4 from '@/assets/images/client4-1.png';
+import clientImg5 from '@/assets/images/client5-1.jpg';
+import clientImg6 from '@/assets/images/client6-1.png';
+import servicePageImg1 from '@/assets/images/service-01.png';
+import servicePageImg2 from '@/assets/images/service-02.png';
+import servicePageImg3 from '@/assets/images/service-03.png';
+import bimImg from '@/assets/images/bimImg.jpg';
 
 
 export {
@@ -45,6 +64,7 @@ export {
     serviceImg6,
     serviceImg7,
     serviceImg8,
-    serviceImg9,
-    serviceImg10,buildingImg1,buildingImg2
+    serviceImg9,bannerImg,bimImg,
+    serviceImg10,buildingImg1,buildingImg2,projectImg1,projectImg2,projectImg3,projectImg4,projectImg5,projectImg6,projectImg7,projectImg8,
+    clientImg1,clientImg2,clientImg3,clientImg4,clientImg5,clientImg6,servicePageImg1,servicePageImg2,servicePageImg3
 }

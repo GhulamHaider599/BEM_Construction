@@ -13,7 +13,7 @@ import Faqs from './Faqs'
 const HomePage = () => {
   return (
     <>
-    <Header/>
+    
     <HeroSection/>
     <FeaturedSection/>
     <OurServices/>
@@ -22,7 +22,7 @@ const HomePage = () => {
     <FeaturedProjects/>
     <BestPractice/>
     <Faqs/>
-    <Footer/>
+   
     </>
   )
 }

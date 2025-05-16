@@ -39,3 +39,15 @@ body {
   color: white;
   font-size: 60px;
 }
+ /* Scoped to only the client-swiper */
+.client-swiper {
+  padding-bottom: 100px !important;
+}
+
+.client-swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+  top: 120px !important;
+}
+
+.client-swiper .swiper-pagination-bullet {
+  background-color: #FF6210 !important;
+}

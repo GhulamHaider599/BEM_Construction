@@ -1,11 +1,14 @@
+'use client'
 import React from 'react'
 import Container from './Container'
 import Image from 'next/image'
 import { logo } from '@/assets'
 import Link from 'next/link'
 import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react'
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
+  const pathname= usePathname()
   const navItems = [
     {
       name: 'Home',
@@ -45,10 +48,17 @@ const Header = () => {
         <div>
           <nav>
             <ul className='flex gap-x-5 text-white'>
-              {navItems.map((navItem, index) =>(
+              {navItems.map((navItem, index) =>{
+                const isActive = pathname === navItem.href
+                return(
 
-                <li key={index}><Link href={navItem.href}>{navItem.name}</Link></li>
-              ))}
+                <li key={index} className={`hover:text-[#FAFAFA96] ${isActive ? "text-[#FAFAFA96]" : ""}`}>
+                  <Link href={navItem.href}>
+                  {navItem.name}
+
+                  </Link>
+                  </li>
+              )})}
             </ul>
           </nav>
         </div>
