@@ -32,7 +32,7 @@ const Header = () => {
     <div className='w-full absolute z-30'>
       <Container className="flex justify-between items-center py-4 text-white">
         <Image src={logo} alt='logo' className='max-w-[183px] filter invert-100 brightness-0 ' />
-        <p>Make a call: (727) 497 7285</p>
+        <p className='font-open'>Make a call: (727) 497 7285</p>
         <ul className='flex gap-5'>
           <li><Facebook /></li>
           <li><Twitter /></li>
@@ -40,7 +40,7 @@ const Header = () => {
           <li><Linkedin /></li>
         </ul>
       </Container>
-      <hr className='' />
+      <hr className="border-[rgba(235,235,235,0.24)]" />
       <Container className='flex justify-between items-center py-6'>
         <div>
           <nav>

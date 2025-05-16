@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Rubik, Roboto } from "next/font/google";
+import { Geist, Geist_Mono, Rubik, Roboto,Montserrat,Open_Sans } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -18,6 +18,14 @@ const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
 });
+const mont = Montserrat({
+  variable: "--font-mont",
+  subsets: ["latin"],
+});
+const open = Open_Sans({
+  variable: "--font-open",
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "BEM_Construction",
@@ -28,7 +36,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${rubik.variable} ${roboto.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${rubik.variable} ${roboto.variable} ${mont.variable} ${open.variable} antialiased`}
       >
         {children}
       </body>

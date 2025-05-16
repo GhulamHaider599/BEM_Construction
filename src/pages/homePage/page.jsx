@@ -6,6 +6,9 @@ import OurServices from './OurServices'
 import Work from './Work'
 import GetSolution from './GetSolution'
 import FeaturedProjects from './FeaturedProjects'
+import BestPractice from './BestPractice'
+import Footer from '@/components/Footer'
+import Faqs from './Faqs'
 
 const HomePage = () => {
   return (
@@ -17,6 +20,9 @@ const HomePage = () => {
     <Work/>
     <GetSolution/>
     <FeaturedProjects/>
+    <BestPractice/>
+    <Faqs/>
+    <Footer/>
     </>
   )
 }

@@ -21,6 +21,8 @@ import serviceImg10 from '@/assets/images/stadium-bim-project.jpg';
 import workImg from '@/assets/images/04-about-us.jpg';
 import workVisionImg from '@/assets/images/vision.png';
 import workMissionImg from '@/assets/images/mission.png';
+import buildingImg1 from '@/assets/images/buildingImg.jpg';
+import buildingImg2 from '@/assets/images/buildingImg2.jpg';
 
 
 export {
@@ -44,5 +46,5 @@ export {
     serviceImg7,
     serviceImg8,
     serviceImg9,
-    serviceImg10
+    serviceImg10,buildingImg1,buildingImg2
 }
