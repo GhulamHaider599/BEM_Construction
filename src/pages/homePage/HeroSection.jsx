@@ -42,12 +42,12 @@
 'use client'
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, EffectFade } from 'swiper/modules';
+import { Navigation, EffectFade, Autoplay } from 'swiper/modules';
 import 'swiper/css/effect-fade';
 
 import 'swiper/css'
 import 'swiper/css/navigation'
-// import 'swiper/css/autoplay'
+import 'swiper/css/autoplay'
 
 import { slideImg1, slideImg2 } from '@/assets'
 import Button from '@/components/Button'
@@ -74,18 +74,19 @@ const HeroSection = () => {
 
   return (
     <Swiper
-      modules={[Navigation, EffectFade]}
+      modules={[Navigation, EffectFade,Autoplay]}
       effect="fade"
       fadeEffect={{ crossFade: true }}
       loop
       navigation
+      autoplay
        speed={1500}
       className="w-full "
     >
       {heroData.map((item, index) => (
       <SwiperSlide key={index}>
         <div
-          className="bg-[rgba(6,6,51,0.60)] bg-blend-overlay bg-cover bg-center pt-[300px] pb-40"
+          className="bg-[rgba(6,6,51,0.60)] bg-blend-overlay bg-cover bg-center pt-[150px] px-10 lg:px-0 lg:pt-[200px] pb-40"
           style={{ backgroundImage: `url(${item.image})` }}
         >
           <Container>

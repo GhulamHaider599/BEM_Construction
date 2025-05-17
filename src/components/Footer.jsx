@@ -50,6 +50,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <Container className="py-8 flex flex-col md:flex-row justify-between items-center gap-4">
         <p className='text-base font-open'>Copyright © 2025 Bem Solution</p>
+        <p className='font-open hidden lg:block'>Make a call: (727) 497 7285</p>
         <ul className="flex space-x-4">
           {icons.map((Icon, index)=>(
             <li href="#" key={index}><Icon className="w-5 h-5" /></li>

@@ -37,9 +37,10 @@ const DropMessage = () => {
                     <h2 className='text-[#1c0d0a] text-[40px] font-bold font-mont'>Drop Message</h2>
                 </Container>
             </div>
-            <div className='bg-[#1A124D] flex justify-center items-center'>
 
-                <div className="bg-[#1A124D] text-white p-16 max-w-[756px]">
+            <div className="bg-[#1A124D] text-white p-16 flex justify-center items-center">
+                <div className='w-full max-w-[756px]'>
+
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <input
                             type="text"
@@ -88,9 +89,10 @@ const DropMessage = () => {
                     </form>
                 </div>
 
-
-
             </div>
+
+
+
         </div>
     )
 }
