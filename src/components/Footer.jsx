@@ -3,6 +3,7 @@ import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'; // or you
 import Container from './Container';
 
 const Footer = () => {
+    const icons =[Facebook ,Twitter, Instagram ,Linkedin]
   return (
     <footer className="bg-[#1c0d0a] text-white text-sm ">
       <Container className="pt-[100px] pb-[45px]  grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -49,12 +50,11 @@ const Footer = () => {
       {/* Bottom Bar */}
       <Container className="py-8 flex flex-col md:flex-row justify-between items-center gap-4">
         <p className='text-base font-open'>Copyright © 2025 Bem Solution</p>
-        <div className="flex space-x-4">
-          <a href="#"><Facebook className="w-5 h-5" /></a>
-          <a href="#"><Twitter className="w-5 h-5" /></a>
-          <a href="#"><Instagram className="w-5 h-5" /></a>
-          <a href="#"><Linkedin className="w-5 h-5" /></a>
-        </div>
+        <ul className="flex space-x-4">
+          {icons.map((Icon, index)=>(
+            <li href="#" key={index}><Icon className="w-5 h-5" /></li>
+          ))}
+        </ul>
       </Container>
     </footer>
   );

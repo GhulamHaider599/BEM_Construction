@@ -42,6 +42,7 @@ import servicePageImg1 from '@/assets/images/service-01.png';
 import servicePageImg2 from '@/assets/images/service-02.png';
 import servicePageImg3 from '@/assets/images/service-03.png';
 import bimImg from '@/assets/images/bimImg.jpg';
+import counterImg from '@/assets/images/counterImg.jpg';
 
 
 export {
@@ -64,7 +65,7 @@ export {
     serviceImg6,
     serviceImg7,
     serviceImg8,
-    serviceImg9,bannerImg,bimImg,
+    serviceImg9,bannerImg,bimImg,counterImg,
     serviceImg10,buildingImg1,buildingImg2,projectImg1,projectImg2,projectImg3,projectImg4,projectImg5,projectImg6,projectImg7,projectImg8,
     clientImg1,clientImg2,clientImg3,clientImg4,clientImg5,clientImg6,servicePageImg1,servicePageImg2,servicePageImg3
 }
