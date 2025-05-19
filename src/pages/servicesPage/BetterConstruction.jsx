@@ -4,13 +4,13 @@ import React from 'react'
 
 const BetterConstruction = () => {
     return (
-        <div className='bg-white p-[55px]'>
-            <div className='flex text-black'>
-                <div className='w-[40%] space-y-6'>
-                    <h3 className='font-rubik text-[#1A124D] font-medium leading-[1.3] text-2xl'>Innovative Methods For <br /> Better Construction  </h3>
-                    <h2 className='font-rubik text-[#1C0D0A] font-medium leading-[1.3] text-[40px]'>Your Offshore <br /> Design And BIM Partner</h2>
-                    <p className='font-roboto text-[#353535]  leading-[25px] text-base'> Choose us as your offshore design and BIM partner <br /> and experience the benefits of professional support <br /> and cost-effective solutions.</p>
-                    <p className='font-roboto text-[#353535]  leading-[25px] text-base'> Our team of highly trained professionals use the <br /> latest technology and methods to deliver <br /> accurate designs and models, so you can achieve <br /> your project goals with confidence.
+        <div className='bg-white p-[40px] xl:p-[55px]'>
+            <div className='flex flex-col xl:flex-row text-black'>
+                <div className='w-full xl:w-[40%] space-y-3 xl:space-y-6'>
+                    <h3 className='font-rubik text-[#1A124D] font-medium leading-[1.3] text-2xl'>Innovative Methods For <br className='hidden xl:block'/> Better Construction  </h3>
+                    <h2 className='font-rubik text-[#1C0D0A] font-medium leading-[1.3] text-[40px]'>Your Offshore <br className='hidden xl:block' /> Design And BIM Partner</h2>
+                    <p className='font-roboto text-[#353535]  leading-[25px] text-base'> Choose us as your offshore design and BIM partner <br className='hidden xl:block' /> and experience the benefits of professional support <br className='hidden xl:block' /> and cost-effective solutions.</p>
+                    <p className='font-roboto text-[#353535]  leading-[25px] text-base'> Our team of highly trained professionals use the <br /> latest technology and methods to deliver <br className='hidden xl:block' /> accurate designs and models, so you can achieve <br className='hidden xl:block' /> your project goals with confidence.
                     </p>
                 </div>
                 <div className='grid grid-cols-2 w-[60%]'>

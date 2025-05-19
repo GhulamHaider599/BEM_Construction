@@ -143,7 +143,7 @@ const Header = () => {
             <li key={index}><Icon /></li>
           ))}
         </ul> */}
-             <div>
+        <div className='hidden lg:block'>
           <nav>
             <ul className='flex gap-x-5 text-white'>
               {navItems.map((navItem, index) => {
@@ -190,7 +190,7 @@ const Header = () => {
             </ul>
           </nav>
         </div>
-        <Link href='#' className='border border-white px-10 py-4 text-white bg-transparent font-semibold hover:bg-white hover:text-black transition-colors duration-300 ease-in-out font-roboto'>
+        <Link href='#' className='border border-white px-10 py-4 hidden lg:block text-white bg-transparent font-semibold hover:bg-white hover:text-black transition-colors duration-300 ease-in-out font-roboto'>
           Request A Quote
         </Link>
         {menuOpen ? <X onClick={() => setMenuOpen(!menuOpen)} /> : <MenuIcon className='lg:hidden' onClick={() => setMenuOpen(!menuOpen)} />}
@@ -198,7 +198,7 @@ const Header = () => {
 
       </Container>
       {menuOpen && (
-        <MobileMenu navItems={navItems} closeMenu={()=>setMenuOpen(false)}/>
+        <MobileMenu navItems={navItems} closeMenu={() => setMenuOpen(false)} />
       )
 
       }

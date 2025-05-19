@@ -33,20 +33,20 @@ const Work = () => {
             <Container className='pt-8 pb-4 space-y-8'>
                 <div className='space-y-4'>
                     <h2 className='font-mont text-[#1C0D0A] text-[40px] font-bold'>How We Work</h2>
-                    <div className='flex justify-between'>
-                        <p className='font-roboto text-base text-[#353535] font-bold'>Our work is our Pride. We assist the project holders in knowing the key aspect of their project in an informative approach <br /> that is segregated in form of different steps and processes.
+                    <div className='flex flex-col xl:flex-row xl:justify-between xl:gap-x-10 xl:items-center'>
+                        <p className='font-roboto text-base text-[#353535] max-w-[882px] font-bold'>Our work is our Pride. We assist the project holders in knowing the key aspect of their project in an informative approach  that is segregated in form of different steps and processes.
                         </p>
-                        <Button txt='Our Services' className='border border-black !text-[#54595F] hover:!bg-putple hover:!text-white !px-10 my-4'
+                        <Button txt='Our Services' className='border border-black whitespace-nowrap !text-[#54595F] hover:!bg-putple hover:!text-white !px-10 my-4'
                             icon={
                                 <ArrowRightCircleIcon className=" !text-[#54595F] fill-white group-hover:!fill-purple group-hover:!text-white" />
                             }
                         />
                     </div>
                 </div>
-                <div className='grid grid-cols-4'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-2 xl:gap-0 xl:grid-cols-4'>
                     {workData.map((work, index)=>(
 
-                        <div key={index} className='p-10 border border-gray-300 space-y-5 hover:border-purple hover:!border-t-[6px] transition-all duration-300 ease-in-out'>
+                        <div key={index} className='p-5 md:p-10 border border-gray-300 space-y-5 hover:border-purple hover:!border-t-[6px] transition-all duration-300 ease-in-out'>
                         <Image src={work.image} alt={`domain_img ${index + 1}`} />
                         <h3 className='font-mont text-2xl font-bold text-[#1C0D0A]'>{work.title}</h3>
                         <p className='font-roboto text-base text-[#353535]'>{work.description}</p>

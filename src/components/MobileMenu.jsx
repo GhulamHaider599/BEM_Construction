@@ -51,7 +51,7 @@ const MobileMenu = ({ navItems, closeMenu }) => {
                           className='flex justify-between items-center cursor-pointer'
                           onClick={() => subItem.subMenus ? toggleSubMenu(subIndex) : null}
                         >
-                          <Link href={subItem.href}>{subItem.name}</Link>
+                          <Link href={subItem.href} onClick={closeMenu}>{subItem.name}</Link>
                           {subItem.subMenus && (
                             <ChevronRight
                               className={`transition-transform duration-300 ${subOpen ? 'rotate-90' : ''}`}
@@ -63,7 +63,7 @@ const MobileMenu = ({ navItems, closeMenu }) => {
                           <ul className='bg-white text-black mt-2 pl-4'>
                             {subItem.subMenus.map((subMenu, i) => (
                               <li key={i} className='py-2 border-b border-gray-300'>
-                                <Link href={subMenu.href}>{subMenu.name}</Link>
+                                <Link href={subMenu.href} onClick={closeMenu}>{subMenu.name}</Link>
                               </li>
                             ))}
                           </ul>

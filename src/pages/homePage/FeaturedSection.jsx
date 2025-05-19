@@ -47,22 +47,22 @@ const FeaturedSection = () => {
 
     return (
         <div className='bg-white text-black'>
-            <Container className='flex gap-x-4 py-3 items-center'>
+            <Container className='flex flex-col md:flex-row md:gap-x-4 py-3 gap-y-4 md:gap-y-0'>
 
-                <div className='w-[20%] text-center' ref={ref}>
-                    <div className='flex flex-col items-center justify-center gap-y-6'>
+                <div className='w-full md:w-[20%] text-left md:text-center' ref={ref}>
+                    <div className='flex flex-col items-start md:items-center justify-center xl:gap-y-6'>
                         {counterData.map((item, index) => (
                             <div key={index}>
-                                <h2 className='font-rubik text-[#1A124D] text-[60px] mb-4'>
+                                <h2 className='font-rubik text-[#1A124D] text-[60px] xl:mb-4 '>
                                     {startCount ? <CountUp end={item.title} duration={2} suffix={item.suffix} /> : '0'}
                                 </h2>
-                                <p className='text-base text-start font-roboto text-[#353535] font-bold'>{item.description}</p>
+                                <p className='text-base text-start font-roboto text-[#353535] font-bold px-4'>{item.description}</p>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                <div className='w-[35%]'>
+                <div className='w-full md:w-[35%]'>
                     <Swiper
                         modules={[Autoplay]}
                         loop
@@ -71,32 +71,32 @@ const FeaturedSection = () => {
                             disableOnInteraction: false,
                         }}
                         slidesPerView={1}
-                        className="w-full"
+                        className="w-full h-full"
                     >
                         {images.map((img, index) => (
                             <SwiperSlide key={index}>
-                                <Image src={img} alt={`image_${index}`} objectFit='cover' className='w-full' />
+                                <Image src={img} alt={`image_${index}`} objectFit='cover' className='w-full h-full' />
                             </SwiperSlide>
                         ))}
                     </Swiper>
                 </div>
 
-                <div className='w-[45%] font-roboto font-bold space-y-8 px-4'>
+                <div className='w-full md:w-[45%] font-roboto font-bold space-y-4 xl:space-y-8 px-4'>
                     <h5 className='text-xl text-[#1C0D0A]'>Explore Features</h5>
-                    <h2 className='text-[40px] text-[#1C0D0A]'>A Leading BIM Company</h2>
-                    <p className='text-base text-[#353535] leading-[1]'>
+                    <h2 className='text-[30px] xl:text-[40px] text-[#1C0D0A]'>A Leading BIM Company</h2>
+                    <p className='text-base text-[#353535] leading-[1.3]'>
                         MaRS Group, A BIM Services provider company offer BIM modeling consulting services for designing & engineering projects. We've been working with government organizations, leading developers & corporate organizations for the last 18 years.
                     </p>
-                    <div className='flex justify-between'>
+                    <div className='flex flex-col md:flex-row gap-y-2 md:justify-between'>
                         {leadingImg.map((item, index) => (
-                            <div key={index} className='space-y-4'>
+                            <div key={index} className='space-y-2 lg:space-y-4'>
                                 <Image src={item.img} alt={`image_${index}`} />
                                 <p className='text-lg text-[#353535] leading-[1]'>{item.title}</p>
                             </div>
                         ))}
                     </div>
                     <div className='flex items-center gap-x-3 cursor-pointer'>
-                        <span className='font-roboto text-[#020101] text-[15px]'>Explore Our services</span>
+                        <span className='font-roboto text-[#020101] text-[15px]  py-2'>Explore Our services</span>
                         <ArrowRight className='w-5 h-5' />
                     </div>
                 </div>

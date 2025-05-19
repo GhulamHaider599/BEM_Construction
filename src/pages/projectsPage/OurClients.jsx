@@ -66,10 +66,10 @@ const OurClients = () => {
 
     return (
         <div className='bg-white'>
-            <Container className='pt-[100px] text-center font-mont space-y-4'>
-                <h3 className='text-[#1A124D] text-2xl font-bold'>Trust and Worth</h3>
-                <h2 className='text-[#242424] text-[40px] font-bold'>Our Clients</h2>
-                <div className='pt-[50px]'>
+            <Container className='pt-[30px] xl:pt-[100px] text-center font-mont space-y-2 xl:space-y-4'>
+                <h3 className='text-[#1A124D] text-xl xl:text-2xl font-bold'>Trust and Worth</h3>
+                <h2 className='text-[#242424] text-[30px] xl:text-[40px] font-bold'>Our Clients</h2>
+                <div className='pt-[30px] xl:pt-[50px]'>
 
 
                     <Swiper
@@ -79,14 +79,33 @@ const OurClients = () => {
                             delay: 3000,
                             disableOnInteraction: false,
                         }}
-                        slidesPerView={4}
-                        spaceBetween={30}
+                            breakpoints={{
+                            0: {
+                                slidesPerView: 1,
+                                spaceBetween: 10,
+                            },
+                            640: {
+                                slidesPerView: 2,
+                                spaceBetween: 15,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 20,
+                            },
+                            1024: {
+                                slidesPerView: 3,
+                                spaceBetween: 30,
+                            },
+                        }}
                         pagination={{ clickable: true }}
                         className='w-full px-4  client-swiper'
                     >
                         {clients.map((clientImg, index) => (
-                            <SwiperSlide key={index} className='flex justify-center items-center'>
-                                <Image src={clientImg} alt={`client_${index}`} className='w-auto h-auto' />
+                            <SwiperSlide key={index} >
+                                <div className='flex justify-center items-center'>
+
+                                <Image src={clientImg} alt={`client_${index}`} className='' />
+                                </div>
                             </SwiperSlide>
                         ))}
                     </Swiper>

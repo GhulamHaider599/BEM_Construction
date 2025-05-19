@@ -14,7 +14,7 @@ import 'swiper/css/autoplay'
 import Button from '@/components/Button'
 
 const OurServices = () => {
-     const swiperRef = useRef(null);
+    const swiperRef = useRef(null);
     const servicesData = [
         {
             title: 'Scan to BIM Services',
@@ -46,22 +46,38 @@ const OurServices = () => {
     return (
         <div className='bg-cover bg-center pt-[39px] pb-[47px]' style={{ backgroundImage: `url(${serviceImg.src})` }}>
             <Container className='space-y-8'>
-                <div className='flex justify-between items-center py-5'>
+                <div className='flex flex-col xl:flex-row xl:justify-between  gap-y-4 xl:gap-y-0 py-5'>
 
                     <h2 className='font-rubik text-white leading-[1.3] text-[32px] font-bold'>Our BIM Services</h2>
-                    <p className='font-roboto text-white leading-[25px] text-[16px] '>Handling a wide range of BIM design projects in this time, we have attained significant experience in this  <br /> field which truly makes us industry leaders.</p>
+                    <p className='font-roboto text-white leading-[25px] text-[16px] '>Handling a wide range of BIM design projects in this time, we have attained significant experience in this   field which truly makes us industry leaders.</p>
                 </div>
                 <div className=' '>
                     <Swiper
                         modules={[Autoplay]}
                         loop
-                        onSwiper={(swiper) => (swiperRef.current = swiper)} 
+                        onSwiper={(swiper) => (swiperRef.current = swiper)}
                         autoplay={{
                             delay: 3000, // delay between slides in ms
                             disableOnInteraction: false, // keep autoplay after interaction
                         }}
-                        slidesPerView={4}
-                        spaceBetween={30}
+                        breakpoints={{
+                            0: {
+                                slidesPerView: 1,
+                                spaceBetween: 10,
+                            },
+                            640: {
+                                slidesPerView: 2,
+                                spaceBetween: 15,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 20,
+                            },
+                            1024: {
+                                slidesPerView: 3,
+                                spaceBetween: 30,
+                            },
+                        }}
                         className="w-full items-stretch"
                     >
                         {servicesData.map((service, index) => (
@@ -70,9 +86,9 @@ const OurServices = () => {
                                     <div>
                                         <Image src={service.image} alt={`services_img_${index}`} width={300} height={300} className='w-full h-full' />
                                     </div>
-                                    <div className='p-[30px] bg-white'>
-                                        <h4 className='font-rubik font-medium text-2xl text-[#1C0D0A]'>{service.title}</h4>
-                                        <p className='font-roboto font-medium text-[15px] text-[#4b4b4b] mt-[30px] min-h-[90px]'>{service.description}</p>
+                                    <div className='p-[15px] xl:p-[30px] bg-white'>
+                                        <h4 className='font-rubik font-medium text-2xl text-[#1C0D0A] min-h-16'>{service.title}</h4>
+                                        <p className='font-roboto font-medium text-[15px] text-[#4b4b4b] mt-[30px] min-h-[135px] '>{service.description}</p>
                                         <Link href='#' className='rounded-lg border border-gray-300 px-[18px] font-bold w-max mt-4 py-[10px] text-[#3b3f42] hover:text-white text-sm font-roboto flex items-center gap-x-2 bg-white hover:bg-[#1A124D] transition-colors duration-300 ease-in-out ' >
                                             Read More
                                             <ArrowRightCircle className='w-4 h-4 ' />
@@ -83,20 +99,20 @@ const OurServices = () => {
                         ))}
                     </Swiper>
                 </div>
-                <div className='flex justify-between items-center'>
-                    <div className='flex gap-x-4 '>
+                <div className='flex md:justify-between justify-center items-center'>
+                    <div className='flex flex-col gap-y-2 sm:gap-y-0 sm:flex-row sm:gap-x-4 '>
                         <Button txt='Explore All Services' className='!bg-transparent !text-white !border-[3px] border-white !rounded-xl !px-8 hover:!bg-white
                          hover:!text-[#54595F]' />
-                        <Button txt='Request A Quote' className='!bg-[#1B1A1A] !text-white !rounded-xl !px-8 hover:!bg-white hover:!text-[#54595F]'
+                        <Button txt='Request A Quote' className='!bg-[#1B1A1A] !text-white whitespace-nowrap !rounded-xl !px-8 hover:!bg-white hover:!text-[#54595F]'
                             icon={<ArrowRightCircleIcon className="text-white fill-transparent group-hover:fill-white group-hover:text-[#54595F]" />}
                         />
                     </div>
-                    <div>
+                    <div className='hidden lg:block'>
                         <button className='cursor-pointer' onClick={() => swiperRef.current?.slidePrev()}>
-                            <ChevronLeft className='w-20 h-20 hover:text-[#54595F] text-white transition-colors duration-300 ease-in-out'  />
+                            <ChevronLeft className='w-20 h-20 hover:text-[#54595F] text-white transition-colors duration-300 ease-in-out' />
                         </button>
                         <button className='cursor-pointer' onClick={() => swiperRef.current?.slideNext()}>
-                            <ChevronRight className='w-20 h-20 hover:text-[#54595F] text-white transition-colors duration-300 ease-in-out'/>
+                            <ChevronRight className='w-20 h-20 hover:text-[#54595F] text-white transition-colors duration-300 ease-in-out' />
                         </button>
                     </div>
                 </div>

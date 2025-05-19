@@ -24,19 +24,19 @@ const BestPractice = () => {
         },
     ]
     return (
-        <div className='grid grid-cols-2'>
-            <div className='min-h-[597px] bg-[#140B06]/80 bg-blend-overlay bg-cover bg-center flex justify-center items-cente pt-[150px]' style={{ backgroundImage: `url(${buildingImg1.src})` }}>
-                <div className='text-white max-w-[500px] space-y-8'>
+        <div className='grid grid-cols-1 lg:grid-cols-2'>
+            <div className='min-h-[597px] bg-[#140B06]/80 bg-blend-overlay bg-cover bg-center flex justify-center items-cente pt-[75px] xl:pt-[150px]' style={{ backgroundImage: `url(${buildingImg1.src})` }}>
+                <div className='text-white md:max-w-[500px] space-y-4 md:space-y-8 p-5 md:p-0 lg:p-5 xl:p-0'>
                     <h4 className='font-mont leading-[1.2] font-medium text-2xl'>Sustainability</h4>
-                    <h2 className='font-mont leading-[1.3] font-bold text-[40px]'>Committed To Keep People Healthy & Safe</h2>
+                    <h2 className='font-mont leading-[1.3] font-bold text-[30px] md:text-[40px]'>Committed To Keep People Healthy & Safe</h2>
                     <p className='text-base font-open '>Commitment to sustainability through eco-friendly and energy-efficient construction practices.</p>
                     {/* <Button txt='Get In Touch' /> */}
                     <Button txt='Get In Touch' className='!bg-transparent !text-white !border-[3px] !mt-[60px] border-white !rounded-lg !px-[45px] !py-[22px] hover:!bg-white
                          hover:!text-[#54595F]' />
                 </div>
             </div>
-            <div className='min-h-[597px] bg-[#1A124D]/80 bg-blend-overlay bg-cover bg-center flex justify-center items-cente pt-[150px]' style={{ backgroundImage: `url(${buildingImg2.src})` }}>
-                <div className='text-white max-w-[500px] space-y-8'>
+            <div className='min-h-[597px] bg-[#1A124D]/80 bg-blend-overlay bg-cover bg-center flex justify-center items-cente pt-[75px] xl:pt-[150px]' style={{ backgroundImage: `url(${buildingImg2.src})` }}>
+                <div className='text-white md:max-w-[500px] space-y-4 md:space-y-8 p-5 md:p-0 lg:p-5 xl:p-0'>
                     <h3 className='font-mont font-bold text-2xl'>We Follow Best Practices</h3>
                     <p className='text-base font-open'>Exceeding industry standards with our commitment to excellence and best practices.</p>
                     <ul className='text-white space-y-2'>

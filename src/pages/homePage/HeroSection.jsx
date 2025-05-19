@@ -40,7 +40,7 @@
 
 
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, EffectFade, Autoplay } from 'swiper/modules';
 import 'swiper/css/effect-fade';
@@ -71,14 +71,24 @@ const HeroSection = () => {
       image: slideImg2.src
     }
   ]
+  const [showNav, setShowNav] = useState(false);
 
+  useEffect(() => {
+    const checkSize = () => {
+      setShowNav(window.innerWidth >= 1024);
+    };
+
+    checkSize(); // on mount
+    window.addEventListener('resize', checkSize);
+    return () => window.removeEventListener('resize', checkSize);
+  }, []);
   return (
     <Swiper
       modules={[Navigation, EffectFade,Autoplay]}
       effect="fade"
       fadeEffect={{ crossFade: true }}
       loop
-      navigation
+      navigation={showNav}
       autoplay
        speed={1500}
       className="w-full "
@@ -86,11 +96,11 @@ const HeroSection = () => {
       {heroData.map((item, index) => (
       <SwiperSlide key={index}>
         <div
-          className="bg-[rgba(6,6,51,0.60)] bg-blend-overlay bg-cover bg-center pt-[150px] px-10 lg:px-0 lg:pt-[200px] pb-40"
+          className="bg-[rgba(6,6,51,0.60)] bg-blend-overlay bg-cover bg-center pt-[150px] px-4 lg:px-0 lg:pt-[200px] pb-20 lg:pb-40"
           style={{ backgroundImage: `url(${item.image})` }}
         >
-          <Container>
-            <h1 className="font-rubik text-white font-semibold leading-[1.1] text-[75px] max-w-[875px]">
+          <Container className='lg:px-16'>
+            <h1 className="font-rubik text-white font-semibold leading-[1.1] text-[60px] lg:text-[75px] max-w-[875px]">
               {item.title}
             </h1>
             <p className={`font-rubik text-white font-bold leading-[1.5] mt-12 mb-8 ${index === 0 ? 'max-w-[780px]' : 'max-w-[750px]'}`}>
