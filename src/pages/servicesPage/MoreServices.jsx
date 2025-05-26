@@ -59,8 +59,24 @@ const MoreServices = () => {
                             delay: 3000, // delay between slides in ms
                             disableOnInteraction: false, // keep autoplay after interaction
                         }}
-                        slidesPerView={4}
-                        spaceBetween={30}
+                           breakpoints={{
+                            0: {
+                                slidesPerView: 1,
+                                spaceBetween: 10,
+                            },
+                            640: {
+                                slidesPerView: 2,
+                                spaceBetween: 15,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 20,
+                            },
+                            1024: {
+                                slidesPerView: 3,
+                                spaceBetween: 30,
+                            },
+                        }}
                         className="w-full"
                     >
                         {servicesData.map((service, index) => (
@@ -69,9 +85,9 @@ const MoreServices = () => {
                                     <div>
                                         <Image src={service.image} alt={`services_img_${index}`} width={300} height={300} className='w-full h-full' />
                                     </div>
-                                    <div className='p-[30px] bg-white'>
+                                    <div className='p-[20px] xl:p-[30px] bg-white space-y-2 xl:space-y-0'>
                                         <h4 className='font-rubik font-medium text-2xl text-[#1C0D0A]'>{service.title}</h4>
-                                        <p className='font-roboto font-medium text-[15px] text-[#4b4b4b] mt-[30px] min-h-[90px]'>{service.description}</p>
+                                        <p className='font-roboto font-medium text-[15px] text-[#4b4b4b] xl:mt-[30px] min-h-[90px]'>{service.description}</p>
                                         <Link href='#' className='rounded-lg border border-gray-300 px-[18px] font-bold w-max mt-4 py-[10px] text-[#3b3f42] hover:text-white text-sm font-roboto flex items-center gap-x-2 bg-white hover:bg-[#1A124D] transition-colors duration-300 ease-in-out ' >
                                             Read More
                                             <ArrowRightCircle className='w-4 h-4 ' />
@@ -84,9 +100,9 @@ const MoreServices = () => {
                 </div>
                
                     <div className='flex gap-x-4 '>
-                        <Button txt='Explore All Services' className='!bg-purple !text-white !border hover:!border-black !rounded-xl !px-8 hover:!bg-white
+                        <Button txt='Explore All Services' className='!bg-purple !text-white !border hover:!border-black !rounded-xl xl:!px-8 hover:!bg-white
                          hover:!text-[#54595F]' />
-                        <Button txt='Request A Quote' className='!bg-[#1B1A1A] !text-white !border hover:!border-black !rounded-xl !px-8 hover:!bg-white hover:!text-[#54595F]'
+                        <Button txt='Request A Quote' className='!bg-[#1B1A1A] !text-white !border hover:!border-black !rounded-xl xl:!px-8 hover:!bg-white hover:!text-[#54595F]'
                             icon={<ArrowRightCircleIcon className="text-white fill-transparent group-hover:fill-white group-hover:text-[#54595F]" />}
                         />
                     </div>

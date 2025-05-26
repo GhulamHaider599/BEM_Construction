@@ -13,7 +13,7 @@ const BetterConstruction = () => {
                     <p className='font-roboto text-[#353535]  leading-[25px] text-base'> Our team of highly trained professionals use the <br /> latest technology and methods to deliver <br className='hidden xl:block' /> accurate designs and models, so you can achieve <br className='hidden xl:block' /> your project goals with confidence.
                     </p>
                 </div>
-                <div className='grid grid-cols-2 w-[60%]'>
+                <div className='grid grid-cols-1 md:grid-cols-2 w-full xl:w-[60%]'>
 
                     <div className='p-2.5 space-y-4'>
 

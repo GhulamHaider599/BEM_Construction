@@ -42,15 +42,16 @@ const Counter = () => {
             className='bg-cover bg-center min-h-[283px] bg-[rgba(6,6,51,0.70)] bg-blend-overlay'
             style={{ backgroundImage: `url(${counterImg.src})` }}
         >
-            <Container className='min-h-[283px] flex justify-center items-center'>
-                <div className='flex gap-x-7 flex-wrap justify-center'>
+            <Container className='min-h-[283px] flex justify-center items-center py-5'>
+                {/* <div className='flex flex-wrap justify-center'> */}
+                <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-y-2 sm:gap-4 '>
                     {details.map((item, index) => (
-                        <div key={index} className='flex gap-x-7 items-center'>
+                        <div key={index} className='flex gap-x-4 xl:gap-x-7 items-center '>
                             <div className='w-12 h-12 rounded-full flex justify-center items-center flex-shrink-0 bg-purple'>
                                 <item.icon className='w-5 h-5 fill-white' />
                             </div>
                             <div className='space-y-2 text-white'>
-                                <h2 className='font-mont text-[40px] font-bold'>
+                                <h2 className='font-mont text-[30px] xl:text-[40px] font-bold'>
                                     {inView && (
                                         <CountUp
                                             end={item.count}

@@ -55,9 +55,25 @@ const BIMSlider = () => {
                             delay: 3000, // delay between slides in ms
                             disableOnInteraction: false, // keep autoplay after interaction
                         }}
-                        slidesPerView={3}
-                        spaceBetween={20}
-                        className="w-full items-stretch"
+                           breakpoints={{
+                            0: {
+                                slidesPerView: 1,
+                                spaceBetween: 10,
+                            },
+                            640: {
+                                slidesPerView: 2,
+                                spaceBetween: 15,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 20,
+                            },
+                            1024: {
+                                slidesPerView: 3,
+                                spaceBetween: 30,
+                            },
+                        }}
+                        className="w-full items-stretch bimSlider"
                     >
                         {servicesData.map((service, index) => (
                             <SwiperSlide key={index}>
@@ -65,23 +81,23 @@ const BIMSlider = () => {
                                     <div>
                                         <Image src={service.image} alt={`services_img_${index}`} width={300} height={300} className='w-full h-full' />
                                     </div>
-                                    <div className='p-[30px] bg-white'>
-                                        <h4 className='font-rubik font-medium text-2xl text-[#1C0D0A]'>{service.title}</h4>
+                                    <div className='p-[30px]  bg-white'>
+                                        <h4 className='font-rubik font-medium text-2xl min-h-[64px] text-[#1C0D0A]'>{service.title}</h4>
                                     </div>
                                 </div>
                             </SwiperSlide>
                         ))}
                     </Swiper>
                 </div>
-                <div className='flex justify-between items-center'>
-                    <div className='flex gap-x-4 '>
-                        <Button txt='Explore All Services' className='!bg-transparent !text-white !border border-white !rounded-xl !px-8 hover:!bg-white
+                <div className='flex flex-col sm:flex-row sm:justify-between sm:items-center'>
+                    <div className='flex flex-col sm:flex-row sm:gap-x-4 gap-y-2 sm:gap-y-0'>
+                        <Button txt='Explore All Services' className='!bg-transparent !text-white !border border-white !w-full sm:w-auto !rounded-xl !px-8 hover:!bg-white
                          hover:!text-[#54595F]' />
-                        <Button txt='Request A Quote' className='!bg-[#1B1A1A] !text-white !rounded-xl !px-8 hover:!bg-white hover:!text-[#54595F]'
+                        <Button txt='Request A Quote' className='!bg-[#1B1A1A] !text-white !w-full whitespace-nowrap !rounded-xl !px-8 hover:!bg-white hover:!text-[#54595F]'
                             icon={<ArrowRightCircleIcon className="text-white fill-transparent group-hover:fill-white group-hover:text-[#54595F]" />}
                         />
                     </div>
-                    <div>
+                    <div className='flex justify-center mt-2 sm:mt-0 '>
                         <button className='cursor-pointer' onClick={() => swiperRef.current?.slidePrev()}>
                             <ChevronLeft className='w-15 h-15 hover:text-[#54595F] text-white transition-colors duration-300 ease-in-out stroke-3'  />
                         </button>

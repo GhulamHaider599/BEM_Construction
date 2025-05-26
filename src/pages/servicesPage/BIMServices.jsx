@@ -4,7 +4,7 @@ import BIMSlider from './BIMSlider'
 
 const BIMServices = () => {
   return (
-    <div className='grid grid-cols-2'>
+    <div className='grid grid-cols-1 xl:grid-cols-2'>
       <div className='bg-[#353535] p-10 text-white space-y-4'>
         <h2 className='font-mont text-[40px] font-bold'>BIM Services</h2>
         <p className='font-roboto text-base leading-[25px]'>BIM is extremely valuable as it facilitates all phases of a project from design to construction to operation and maintenance. We are committed to providing efficient and innovative solutions for successful project delivery.</p>
